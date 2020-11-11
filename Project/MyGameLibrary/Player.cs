@@ -19,7 +19,7 @@ namespace Fall2020_CSC403_Project.code {
 
         public void UpdateLevel() {
             Level += 1;
-            Exp = 0;
+            Exp -= ExpNeeded;
             ExpNeeded = (Level * 10);
         }
     }
