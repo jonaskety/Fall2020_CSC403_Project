@@ -40,6 +40,16 @@ namespace Fall2020_CSC403_Project
             this.picItem8 = new System.Windows.Forms.PictureBox();
             this.picItem9 = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnUse = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblPower = new System.Windows.Forms.Label();
+            this.btnDestroy = new System.Windows.Forms.Button();
+            this.lblPlayerHealthFull = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblStrength = new System.Windows.Forms.Label();
+            this.lblDefense = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picItem2)).BeginInit();
@@ -56,7 +66,7 @@ namespace Fall2020_CSC403_Project
             // 
             this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.player;
             this.picPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picPlayer.Location = new System.Drawing.Point(99, 68);
+            this.picPlayer.Location = new System.Drawing.Point(99, 46);
             this.picPlayer.Name = "picPlayer";
             this.picPlayer.Size = new System.Drawing.Size(122, 250);
             this.picPlayer.TabIndex = 0;
@@ -70,6 +80,7 @@ namespace Fall2020_CSC403_Project
             this.picItem1.Size = new System.Drawing.Size(100, 100);
             this.picItem1.TabIndex = 1;
             this.picItem1.TabStop = false;
+            this.picItem1.Click += new System.EventHandler(this.picItem1_Click);
             // 
             // picItem2
             // 
@@ -79,6 +90,7 @@ namespace Fall2020_CSC403_Project
             this.picItem2.Size = new System.Drawing.Size(100, 100);
             this.picItem2.TabIndex = 2;
             this.picItem2.TabStop = false;
+            this.picItem2.Click += new System.EventHandler(this.picItem2_Click);
             // 
             // picItem3
             // 
@@ -88,6 +100,7 @@ namespace Fall2020_CSC403_Project
             this.picItem3.Size = new System.Drawing.Size(100, 100);
             this.picItem3.TabIndex = 3;
             this.picItem3.TabStop = false;
+            this.picItem3.Click += new System.EventHandler(this.picItem3_Click);
             // 
             // picItem4
             // 
@@ -147,19 +160,137 @@ namespace Fall2020_CSC403_Project
             // 
             this.btnExit.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(51, 377);
+            this.btnExit.Location = new System.Drawing.Point(701, 334);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(220, 111);
+            this.btnExit.Size = new System.Drawing.Size(206, 97);
             this.btnExit.TabIndex = 10;
             this.btnExit.Text = "Exit Inventory";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnUse
+            // 
+            this.btnUse.Enabled = false;
+            this.btnUse.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUse.Location = new System.Drawing.Point(724, 185);
+            this.btnUse.Name = "btnUse";
+            this.btnUse.Size = new System.Drawing.Size(161, 45);
+            this.btnUse.TabIndex = 11;
+            this.btnUse.Text = "Use";
+            this.btnUse.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Green;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(723, 139);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 32);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Item Power:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblPower
+            // 
+            this.lblPower.BackColor = System.Drawing.Color.Green;
+            this.lblPower.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPower.Location = new System.Drawing.Point(841, 139);
+            this.lblPower.Name = "lblPower";
+            this.lblPower.Size = new System.Drawing.Size(50, 32);
+            this.lblPower.TabIndex = 13;
+            this.lblPower.Text = "0";
+            this.lblPower.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnDestroy
+            // 
+            this.btnDestroy.Enabled = false;
+            this.btnDestroy.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDestroy.Location = new System.Drawing.Point(724, 245);
+            this.btnDestroy.Name = "btnDestroy";
+            this.btnDestroy.Size = new System.Drawing.Size(161, 45);
+            this.btnDestroy.TabIndex = 14;
+            this.btnDestroy.Text = "Destroy";
+            this.btnDestroy.UseVisualStyleBackColor = true;
+            // 
+            // lblPlayerHealthFull
+            // 
+            this.lblPlayerHealthFull.BackColor = System.Drawing.Color.Blue;
+            this.lblPlayerHealthFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerHealthFull.ForeColor = System.Drawing.Color.White;
+            this.lblPlayerHealthFull.Location = new System.Drawing.Point(47, 323);
+            this.lblPlayerHealthFull.Name = "lblPlayerHealthFull";
+            this.lblPlayerHealthFull.Size = new System.Drawing.Size(226, 20);
+            this.lblPlayerHealthFull.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Location = new System.Drawing.Point(46, 322);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(229, 23);
+            this.label2.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Green;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(85, 382);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 32);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Strength:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Green;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(85, 425);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(112, 32);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Defense:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblStrength
+            // 
+            this.lblStrength.BackColor = System.Drawing.Color.Green;
+            this.lblStrength.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStrength.Location = new System.Drawing.Point(182, 382);
+            this.lblStrength.Name = "lblStrength";
+            this.lblStrength.Size = new System.Drawing.Size(50, 32);
+            this.lblStrength.TabIndex = 20;
+            this.lblStrength.Text = "0";
+            this.lblStrength.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDefense
+            // 
+            this.lblDefense.BackColor = System.Drawing.Color.Green;
+            this.lblDefense.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDefense.Location = new System.Drawing.Point(182, 425);
+            this.lblDefense.Name = "lblDefense";
+            this.lblDefense.Size = new System.Drawing.Size(50, 32);
+            this.lblDefense.TabIndex = 21;
+            this.lblDefense.Text = "0";
+            this.lblDefense.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
-            this.ClientSize = new System.Drawing.Size(714, 574);
+            this.ClientSize = new System.Drawing.Size(949, 574);
+            this.Controls.Add(this.lblDefense);
+            this.Controls.Add(this.lblStrength);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblPlayerHealthFull);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnDestroy);
+            this.Controls.Add(this.lblPower);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnUse);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.picItem9);
             this.Controls.Add(this.picItem8);
@@ -201,5 +332,15 @@ namespace Fall2020_CSC403_Project
         private System.Windows.Forms.PictureBox picItem8;
         private System.Windows.Forms.PictureBox picItem9;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnUse;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPower;
+        private System.Windows.Forms.Button btnDestroy;
+        private System.Windows.Forms.Label lblPlayerHealthFull;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblStrength;
+        private System.Windows.Forms.Label lblDefense;
     }
 }
