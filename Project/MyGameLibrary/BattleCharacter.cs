@@ -36,6 +36,12 @@ namespace Fall2020_CSC403_Project.code {
             }
     }
 
+    public void ChallengeMode() {
+            MaxHealth = 40;
+            strength = 3;
+            Health = MaxHealth;
+    }
+
     public void UpdateStats() {
             MaxHealth += 5;
             Health = MaxHealth;
