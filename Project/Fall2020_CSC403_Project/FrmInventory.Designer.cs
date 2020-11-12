@@ -110,6 +110,7 @@ namespace Fall2020_CSC403_Project
             this.picItem4.Size = new System.Drawing.Size(100, 100);
             this.picItem4.TabIndex = 4;
             this.picItem4.TabStop = false;
+            this.picItem4.Click += new System.EventHandler(this.picItem4_Click);
             // 
             // picItem5
             // 
@@ -119,6 +120,7 @@ namespace Fall2020_CSC403_Project
             this.picItem5.Size = new System.Drawing.Size(100, 100);
             this.picItem5.TabIndex = 5;
             this.picItem5.TabStop = false;
+            this.picItem5.Click += new System.EventHandler(this.picItem5_Click);
             // 
             // picItem6
             // 
@@ -128,6 +130,7 @@ namespace Fall2020_CSC403_Project
             this.picItem6.Size = new System.Drawing.Size(100, 100);
             this.picItem6.TabIndex = 6;
             this.picItem6.TabStop = false;
+            this.picItem6.Click += new System.EventHandler(this.picItem6_Click);
             // 
             // picItem7
             // 
@@ -137,6 +140,7 @@ namespace Fall2020_CSC403_Project
             this.picItem7.Size = new System.Drawing.Size(100, 100);
             this.picItem7.TabIndex = 7;
             this.picItem7.TabStop = false;
+            this.picItem7.Click += new System.EventHandler(this.picItem7_Click);
             // 
             // picItem8
             // 
@@ -146,6 +150,7 @@ namespace Fall2020_CSC403_Project
             this.picItem8.Size = new System.Drawing.Size(100, 100);
             this.picItem8.TabIndex = 8;
             this.picItem8.TabStop = false;
+            this.picItem8.Click += new System.EventHandler(this.picItem8_Click);
             // 
             // picItem9
             // 
@@ -155,6 +160,7 @@ namespace Fall2020_CSC403_Project
             this.picItem9.Size = new System.Drawing.Size(100, 100);
             this.picItem9.TabIndex = 9;
             this.picItem9.TabStop = false;
+            this.picItem9.Click += new System.EventHandler(this.picItem9_Click);
             // 
             // btnExit
             // 
@@ -178,6 +184,7 @@ namespace Fall2020_CSC403_Project
             this.btnUse.TabIndex = 11;
             this.btnUse.Text = "Use";
             this.btnUse.UseVisualStyleBackColor = true;
+            this.btnUse.Click += new System.EventHandler(this.btnUse_Click);
             // 
             // label1
             // 
@@ -211,6 +218,7 @@ namespace Fall2020_CSC403_Project
             this.btnDestroy.TabIndex = 14;
             this.btnDestroy.Text = "Destroy";
             this.btnDestroy.UseVisualStyleBackColor = true;
+            this.btnDestroy.Click += new System.EventHandler(this.btnDestroy_Click);
             // 
             // lblPlayerHealthFull
             // 
@@ -281,6 +289,7 @@ namespace Fall2020_CSC403_Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(949, 574);
+            this.ControlBox = false;
             this.Controls.Add(this.lblDefense);
             this.Controls.Add(this.lblStrength);
             this.Controls.Add(this.label6);
