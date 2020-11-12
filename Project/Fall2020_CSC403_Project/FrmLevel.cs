@@ -6,7 +6,10 @@ using System.Windows.Forms;
 namespace Fall2020_CSC403_Project {
   public partial class FrmLevel : Form {
     private Player player;
+    private Mango mango = new Mango();
 
+    private NPC npcMike;
+    private Merchant npcMerchantSteve;
     private Enemy enemyPoisonPacket;
     private Enemy bossKoolaid;
     private Enemy enemyCheeto;
@@ -14,6 +17,8 @@ namespace Fall2020_CSC403_Project {
 
     private DateTime timeBegin;
     private FrmBattle frmBattle;
+    private FrmTalk frmTalk;
+    private FrmShop frmShop;
 
     public FrmLevel() {
       InitializeComponent();
@@ -27,14 +32,31 @@ namespace Fall2020_CSC403_Project {
       bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
       enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
       enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
+      npcMike = new NPC(CreatePosition(picNPCMike), CreateCollider(picNPCMike, PADDING));
+      npcMerchantSteve = new Merchant(CreatePosition(picNPCMerchantSteve), CreateCollider(picNPCMerchantSteve, PADDING));
 
       bossKoolaid.Img = picBossKoolAid.BackgroundImage;
       enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
       enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
+      npcMike.Img = picNPCMike.BackgroundImage;
+      npcMerchantSteve.Img = picNPCMerchantSteve.BackgroundImage;
 
       bossKoolaid.Color = Color.Red;
       enemyPoisonPacket.Color = Color.Green;
       enemyCheeto.Color = Color.FromArgb(255, 245, 161);
+      npcMike.Color = Color.FromArgb(0, 204, 204);
+      npcMerchantSteve.Color = Color.FromArgb(255, 255, 153);
+
+      // declare messages for the NPCs
+      npcMike.Message = "Good luck finishing the Kool-aid!";
+      npcMerchantSteve.Message = "Hello, how are you?";
+      npcMerchantSteve.shopMessage = "Check out my stuff.";
+      
+      // add food to the merchant's inventory
+      mango.Img = picFoodMango.BackgroundImage;
+      npcMerchantSteve.AddFood(mango);
+      npcMerchantSteve.AddFood(mango);
+      npcMerchantSteve.AddFood(mango);
 
       walls = new Character[NUM_WALLS];
       for (int w = 0; w < NUM_WALLS; w++) {
@@ -85,6 +107,16 @@ namespace Fall2020_CSC403_Project {
         Fight(bossKoolaid);
       }
 
+      // check collision with npc
+      if (HitAChar(player, npcMike))
+      {
+          Talk(npcMike);
+      }
+      if (HitAChar(player, npcMerchantSteve))
+      {
+          Shop(npcMerchantSteve);
+      }
+
       // update player's picture box
       picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
     }
@@ -113,6 +145,22 @@ namespace Fall2020_CSC403_Project {
       if (enemy == bossKoolaid) {
         frmBattle.SetupForBossBattle();
       }
+    }
+
+    private void Talk(NPC npc)
+    {
+        player.ResetMoveSpeed();
+        player.MoveBack();
+        frmTalk = FrmTalk.GetInstance(npc);
+        frmTalk.Show();
+    }
+
+    private void Shop(Merchant merchant)
+    {
+        player.ResetMoveSpeed();
+        player.MoveBack();
+        frmShop = FrmShop.GetInstance(merchant);
+        frmShop.Show();
     }
 
     private void FrmLevel_KeyDown(object sender, KeyEventArgs e) {

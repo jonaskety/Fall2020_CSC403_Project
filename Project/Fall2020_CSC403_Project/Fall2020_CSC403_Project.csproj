@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmShop.Designer.cs">
+      <DependentUpon>FrmShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTalk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTalk.Designer.cs">
+      <DependentUpon>FrmTalk.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBattle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +72,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmShop.resx">
+      <DependentUpon>FrmShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTalk.resx">
+      <DependentUpon>FrmTalk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBattle.resx">
       <DependentUpon>FrmBattle.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,13 +131,24 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="code\" />
-    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyGameLibrary\MyGameLibrary.csproj">
       <Project>{F1E60F80-1868-4FE5-991B-FDDCFAF9B16B}</Project>
       <Name>MyGameLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="data\food_mango.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_mango.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\npc_herobrine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\npc_mike.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

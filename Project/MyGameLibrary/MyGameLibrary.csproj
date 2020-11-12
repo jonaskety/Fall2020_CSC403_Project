@@ -46,6 +46,9 @@
   <ItemGroup>
     <Compile Include="BattleCharacter.cs" />
     <Compile Include="Character.cs" />
+    <Compile Include="Mango.cs" />
+    <Compile Include="Food.cs" />
+    <Compile Include="Merchant.cs" />
     <Compile Include="Collider.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Game.cs" />
