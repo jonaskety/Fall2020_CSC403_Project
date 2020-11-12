@@ -10,6 +10,8 @@ namespace Fall2020_CSC403_Project {
     public static FrmBattle instance = null;
     private Enemy enemy;
     private Player player;
+    private bool Boss;
+    private bool ready = false;
 
     private FrmBattle() {
       InitializeComponent();
@@ -23,6 +25,7 @@ namespace Fall2020_CSC403_Project {
       picEnemy.Refresh();
       BackColor = enemy.Color;
       picBossBattle.Visible = false;
+      Boss = false;
 
       // update the player
       picPlayer.BackgroundImage = player.Img;
@@ -30,12 +33,14 @@ namespace Fall2020_CSC403_Project {
       // Observer pattern
       enemy.AttackEvent += PlayerDamage;
       player.AttackEvent += EnemyDamage;
+      player.HealEvent += PlayerHeal;
 
       // show health
       UpdateHealthBars();
     }
 
     public void SetupForBossBattle() {
+      Boss = true;
       picBossBattle.Location = Point.Empty;
       picBossBattle.Size = ClientSize;
       picBossBattle.Visible = true;
@@ -44,6 +49,9 @@ namespace Fall2020_CSC403_Project {
       simpleSound.Play();
 
       tmrFinalBattle.Enabled = true;
+      btnHeal.Visible = true;
+      enemy.ChallengeMode();
+      UpdateHealthBars();
     }
 
     public static FrmBattle GetInstance(Enemy enemy) {
@@ -67,18 +75,22 @@ namespace Fall2020_CSC403_Project {
       lblEnemyHealthFull.Text = enemy.Health.ToString();
     }
 
-        private void UpdateExp() {
-            player.Exp += 5;
-            if (player.Exp >= player.ExpNeeded) {
-                player.UpdateLevel();
-                player.UpdateStats();
-            }
-        }
+    private void UpdateExp() {
+       player.Exp += 5;
+       if (player.Exp >= player.ExpNeeded) {
+            player.UpdateLevel();
+            player.UpdateStats();
+       }
+    }
 
-        private void btnAttack_Click(object sender, EventArgs e) {
+    private void btnAttack_Click(object sender, EventArgs e) {
       player.OnAttack(-4);
       if (enemy.Health > 0) {
-        enemy.OnAttack(-2);
+                if (Boss) {
+                    enemy.OnAttack(-3);
+                } else {
+                    enemy.OnAttack(-2);
+                }
       }
 
       UpdateHealthBars();
@@ -99,9 +111,24 @@ namespace Fall2020_CSC403_Project {
       player.AlterHealth(amount);
     }
 
+    private void PlayerHeal(int amount) {
+            player.AlterHealth(amount);
+    }
+
     private void tmrFinalBattle_Tick(object sender, EventArgs e) {
       picBossBattle.Visible = false;
       tmrFinalBattle.Enabled = false;
     }
-  }
+
+        private void btnHeal_Click(object sender, EventArgs e) {
+            player.OnHeal(4);
+            if (Boss) {
+                enemy.OnAttack(-3);
+            } else {
+                enemy.OnAttack(-2);
+            }
+
+            UpdateHealthBars();
+        }
+    }
 }
