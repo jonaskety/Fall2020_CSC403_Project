@@ -6,6 +6,7 @@ using System.Windows.Forms;
 namespace Fall2020_CSC403_Project {
   public partial class FrmLevel : Form {
     private Player player;
+    public PictureBox playerImage;
 
     private Enemy enemyPoisonPacket;
     private Enemy bossKoolaid;
@@ -96,8 +97,21 @@ namespace Fall2020_CSC403_Project {
         Fight(bossKoolaid);
       }
 
-      // update player's picture box
-      picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
+      // update player's image if less than 80% health to baby peanut
+      if (player.Health < 0.8 * player.MaxHealth)
+      {
+          player.Img = babyPeanut.BackgroundImage;
+          picPlayer.BackgroundImage = player.Img;
+          picPlayer.Refresh();
+      } else
+      {
+          player.Img = picPlayerTemp.BackgroundImage;
+          picPlayer.BackgroundImage = player.Img;
+          picPlayer.Refresh();
+      }
+
+        // update player's picture box
+        picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
     }
 
     private bool HitAWall(Character c) {
@@ -115,15 +129,17 @@ namespace Fall2020_CSC403_Project {
       return you.Collider.Intersects(other.Collider);
     }
 
-    private void Fight(Enemy enemy) {
-      player.ResetMoveSpeed();
-      player.MoveBack();
-      frmBattle = FrmBattle.GetInstance(enemy);
-      frmBattle.Show();
+    private void Fight(Enemy enemy)
+    {
+        player.ResetMoveSpeed();
+        player.MoveBack();
+        frmBattle = FrmBattle.GetInstance(enemy);
+        frmBattle.Show();
 
-      if (enemy == bossKoolaid) {
-        frmBattle.SetupForBossBattle();
-      }
+        if (enemy == bossKoolaid)
+        {
+            frmBattle.SetupForBossBattle();
+        }
     }
 
     private void FrmLevel_KeyDown(object sender, KeyEventArgs e) {
