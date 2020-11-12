@@ -47,7 +47,6 @@
             this.picWall11 = new System.Windows.Forms.PictureBox();
             this.picNPCMike = new System.Windows.Forms.PictureBox();
             this.picNPCMerchantSteve = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picFoodMango = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).BeginInit();
@@ -68,7 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNPCMike)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNPCMerchantSteve)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoodMango)).BeginInit();
             this.SuspendLayout();
             // 
@@ -305,14 +303,6 @@
             this.picNPCMerchantSteve.TabIndex = 19;
             this.picNPCMerchantSteve.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
             // picFoodMango
             // 
             this.picFoodMango.BackColor = System.Drawing.Color.Transparent;
@@ -332,7 +322,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1176, 726);
             this.Controls.Add(this.picFoodMango);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.picNPCMerchantSteve);
             this.Controls.Add(this.picNPCMike);
             this.Controls.Add(this.picWall11);
@@ -379,7 +368,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNPCMike)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNPCMerchantSteve)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoodMango)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -410,7 +398,6 @@
     private System.Windows.Forms.PictureBox picWall11;
     private System.Windows.Forms.PictureBox picNPCMike;
     private System.Windows.Forms.PictureBox picNPCMerchantSteve;
-    private System.Windows.Forms.PictureBox pictureBox1;
     private System.Windows.Forms.PictureBox picFoodMango;
     }
 }
