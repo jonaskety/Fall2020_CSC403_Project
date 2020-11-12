@@ -85,6 +85,10 @@ namespace Fall2020_CSC403_Project {
         Fight(bossKoolaid);
       }
 
+      if (player.Health <= 0) {
+                Close();
+      }
+
       // update player's picture box
       picPlayer.Location = new Point((int)player.Position.x, (int)player.Position.y);
     }
