@@ -47,6 +47,9 @@
             this.picWall11 = new System.Windows.Forms.PictureBox();
             this.lblHealthBar = new System.Windows.Forms.Label();
             this.tmrPlayerHealth = new System.Windows.Forms.Timer(this.components);
+            this.lblLevelBar = new System.Windows.Forms.Label();
+            this.tmrPlayerExp = new System.Windows.Forms.Timer(this.components);
+            this.lblExpBar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyCheeto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall3)).BeginInit();
@@ -77,7 +80,6 @@
             this.lblInGameTime.Size = new System.Drawing.Size(46, 18);
             this.lblInGameTime.TabIndex = 2;
             this.lblInGameTime.Text = "label1";
-            this.lblInGameTime.Click += new System.EventHandler(this.lblInGameTime_Click);
             // 
             // tmrUpdateInGameTime
             // 
@@ -283,7 +285,7 @@
             this.lblHealthBar.BackColor = System.Drawing.Color.Black;
             this.lblHealthBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.lblHealthBar.ForeColor = System.Drawing.Color.Red;
-            this.lblHealthBar.Location = new System.Drawing.Point(12, 38);
+            this.lblHealthBar.Location = new System.Drawing.Point(12, 27);
             this.lblHealthBar.Name = "lblHealthBar";
             this.lblHealthBar.Size = new System.Drawing.Size(46, 18);
             this.lblHealthBar.TabIndex = 18;
@@ -294,6 +296,35 @@
             this.tmrPlayerHealth.Enabled = true;
             this.tmrPlayerHealth.Tick += new System.EventHandler(this.tmrPlayerHealth_Tick);
             // 
+            // lblLevelBar
+            // 
+            this.lblLevelBar.AutoSize = true;
+            this.lblLevelBar.BackColor = System.Drawing.Color.Black;
+            this.lblLevelBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lblLevelBar.ForeColor = System.Drawing.Color.Yellow;
+            this.lblLevelBar.Location = new System.Drawing.Point(12, 45);
+            this.lblLevelBar.Name = "lblLevelBar";
+            this.lblLevelBar.Size = new System.Drawing.Size(46, 18);
+            this.lblLevelBar.TabIndex = 19;
+            this.lblLevelBar.Text = "label1";
+            // 
+            // tmrPlayerExp
+            // 
+            this.tmrPlayerExp.Enabled = true;
+            this.tmrPlayerExp.Tick += new System.EventHandler(this.tmrPlayerExp_Tick);
+            // 
+            // lblExpBar
+            // 
+            this.lblExpBar.AutoSize = true;
+            this.lblExpBar.BackColor = System.Drawing.Color.Black;
+            this.lblExpBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.lblExpBar.ForeColor = System.Drawing.Color.Yellow;
+            this.lblExpBar.Location = new System.Drawing.Point(12, 63);
+            this.lblExpBar.Name = "lblExpBar";
+            this.lblExpBar.Size = new System.Drawing.Size(46, 18);
+            this.lblExpBar.TabIndex = 20;
+            this.lblExpBar.Text = "label1";
+            // 
             // FrmLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -301,6 +332,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1176, 726);
+            this.Controls.Add(this.lblExpBar);
+            this.Controls.Add(this.lblLevelBar);
             this.Controls.Add(this.lblHealthBar);
             this.Controls.Add(this.picWall11);
             this.Controls.Add(this.picWall2);
@@ -373,6 +406,9 @@
     private System.Windows.Forms.PictureBox picWall11;
         private System.Windows.Forms.Label lblHealthBar;
         private System.Windows.Forms.Timer tmrPlayerHealth;
+        private System.Windows.Forms.Label lblLevelBar;
+        private System.Windows.Forms.Timer tmrPlayerExp;
+        private System.Windows.Forms.Label lblExpBar;
     }
 }
 

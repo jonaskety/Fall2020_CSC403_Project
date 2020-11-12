@@ -70,6 +70,12 @@ namespace Fall2020_CSC403_Project {
       lblHealthBar.Text = "HP: " + player.Health.ToString();
     }
 
+    private void tmrPlayerExp_Tick(object sender, EventArgs e)
+    {
+      lblLevelBar.Text = "LEVEL: " + player.Level.ToString();
+      lblExpBar.Text = player.Exp.ToString() + " / " + player.ExpNeeded.ToString();
+    }
+
     private void tmrPlayerMove_Tick(object sender, EventArgs e) {
       // move player
       player.Move();
@@ -143,9 +149,5 @@ namespace Fall2020_CSC403_Project {
           break;
       }
     }
-
-    private void lblInGameTime_Click(object sender, EventArgs e) {
-
     }
-  }
 }
