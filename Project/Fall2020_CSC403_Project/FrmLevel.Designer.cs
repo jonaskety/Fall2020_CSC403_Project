@@ -404,11 +404,11 @@
     private System.Windows.Forms.PictureBox picWall1;
     private System.Windows.Forms.PictureBox picWall2;
     private System.Windows.Forms.PictureBox picWall11;
-        private System.Windows.Forms.Label lblHealthBar;
-        private System.Windows.Forms.Timer tmrPlayerHealth;
-        private System.Windows.Forms.Label lblLevelBar;
-        private System.Windows.Forms.Timer tmrPlayerExp;
-        private System.Windows.Forms.Label lblExpBar;
+    private System.Windows.Forms.Label lblHealthBar;
+    private System.Windows.Forms.Timer tmrPlayerHealth;
+    private System.Windows.Forms.Label lblLevelBar;
+    private System.Windows.Forms.Timer tmrPlayerExp;
+    private System.Windows.Forms.Label lblExpBar;
     }
 }
 
