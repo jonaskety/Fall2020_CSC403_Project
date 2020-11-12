@@ -155,16 +155,14 @@ namespace Fall2020_CSC403_Project
 
         private void btnUse_Click(object sender, EventArgs e)
         {
-            if (selected != null)
-            {
-                selected.Use();
-                DisableCommands();
-            }
+            selected.Use();
+            DisableCommands();
         }
 
         private void btnDestroy_Click(object sender, EventArgs e)
         {
-
+            selected.Use();
+            DisableCommands();
         }
     }
 }

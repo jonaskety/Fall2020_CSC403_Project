@@ -10,6 +10,7 @@ namespace Fall2020_CSC403_Project {
     public static FrmBattle instance = null;
     private Enemy enemy;
     private Player player;
+    private FrmInventory frmInventory;
 
     private FrmBattle() {
       InitializeComponent();
@@ -88,5 +89,16 @@ namespace Fall2020_CSC403_Project {
       picBossBattle.Visible = false;
       tmrFinalBattle.Enabled = false;
     }
-  }
+
+        private void FrmBattle_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.I:
+                    frmInventory = FrmInventory.GetInstance();
+                    frmInventory.ShowCommands();
+                    break;
+            }
+        }
+    }
 }
