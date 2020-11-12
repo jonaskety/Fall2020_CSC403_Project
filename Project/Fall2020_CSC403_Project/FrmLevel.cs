@@ -97,6 +97,10 @@ namespace Fall2020_CSC403_Project {
         Fight(bossKoolaid);
       }
 
+      if (player.Health <= 0) {
+                Close();
+      }
+
       // update player's image if less than 80% health to baby peanut
       if (player.Health < 0.8 * player.MaxHealth)
       {
