@@ -65,6 +65,11 @@ namespace Fall2020_CSC403_Project {
       lblInGameTime.Text = "Time: " + time.ToString();
     }
 
+    private void tmrPlayerHealth_Tick(object sender, EventArgs e)
+    {
+      lblHealthBar.Text = "HP: " + player.Health.ToString();
+    }
+
     private void tmrPlayerMove_Tick(object sender, EventArgs e) {
       // move player
       player.Move();
