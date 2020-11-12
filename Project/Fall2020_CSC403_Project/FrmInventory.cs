@@ -27,9 +27,16 @@ namespace Fall2020_CSC403_Project
                 inventory.Add(null);
         }
 
-        private void FrmInventory_Load(object sender, EventArgs e)
+        private void FrmInventory_Deactivate(object sender, EventArgs e)
+        {
+            instance.Hide();
+        }
+
+        public void ShowCommands()
         {
             UpdateHealthBar();
+            UpdateItemPictures();
+            instance.Show();
         }
 
         private void UpdateHealthBar()
@@ -40,6 +47,28 @@ namespace Fall2020_CSC403_Project
             lblPlayerHealthFull.Width = (int)(MAX_HEALTHBAR_WIDTH * playerHealthPer);
 
             lblPlayerHealthFull.Text = player.Health.ToString();
+        }
+
+        private void UpdateItemPictures()
+        {
+            if (inventory[0] != null)
+                picItem1.Image = inventory[0].image;
+            if (inventory[1] != null)
+                picItem2.Image = inventory[1].image;
+            if (inventory[2] != null)
+                picItem3.Image = inventory[2].image;
+            if (inventory[3] != null)
+                picItem4.Image = inventory[3].image;
+            if (inventory[4] != null)
+                picItem5.Image = inventory[4].image;
+            if (inventory[5] != null)
+                picItem6.Image = inventory[5].image;
+            if (inventory[6] != null)
+                picItem7.Image = inventory[6].image;
+            if (inventory[7] != null)
+                picItem8.Image = inventory[7].image;
+            if (inventory[8] != null)
+                picItem9.Image = inventory[8].image;
         }
 
         public static FrmInventory GetInstance()
@@ -126,7 +155,11 @@ namespace Fall2020_CSC403_Project
 
         private void btnUse_Click(object sender, EventArgs e)
         {
-            
+            if (selected != null)
+            {
+                selected.Use();
+                DisableCommands();
+            }
         }
 
         private void btnDestroy_Click(object sender, EventArgs e)

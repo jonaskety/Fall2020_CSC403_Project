@@ -135,7 +135,7 @@ namespace Fall2020_CSC403_Project {
           break;
         case Keys.I:
           frmInventory = FrmInventory.GetInstance();
-          frmInventory.Show();
+          frmInventory.ShowCommands();
           break;
         default:
           player.ResetMoveSpeed();
