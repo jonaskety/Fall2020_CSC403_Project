@@ -16,6 +16,8 @@ namespace Fall2020_CSC403_Project.code {
         /// </summary>
         public Image Img { get; set; }
 
+        public Image TempImg { get; set; }
+
         public Player(Vector2 initPos, Collider collider) : base(initPos, collider) {
             Exp = 0;
             Level = 1;

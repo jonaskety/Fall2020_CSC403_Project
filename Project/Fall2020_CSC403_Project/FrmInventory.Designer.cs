@@ -66,7 +66,7 @@ namespace Fall2020_CSC403_Project
             // picPlayer
             // 
             this.picPlayer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picPlayer.BackgroundImage")));
-            this.picPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.picPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picPlayer.Location = new System.Drawing.Point(99, 46);
             this.picPlayer.Name = "picPlayer";
             this.picPlayer.Size = new System.Drawing.Size(122, 250);

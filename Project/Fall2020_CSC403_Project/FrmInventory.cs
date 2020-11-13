@@ -33,6 +33,7 @@ namespace Fall2020_CSC403_Project
         {
             UpdateHealthBar();
             UpdateItemPictures();
+            picPlayer.BackgroundImage = player.Img;
             instance.Show();
         }
 

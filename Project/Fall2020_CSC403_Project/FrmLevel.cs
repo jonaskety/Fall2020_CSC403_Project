@@ -21,6 +21,7 @@ namespace Fall2020_CSC403_Project {
     private FrmTalk frmTalk;
     private FrmShop frmShop;
     private FrmInventory frmInventory;
+    private FrmCharacter frmCharacter;
 
     public FrmLevel() {
       InitializeComponent();
@@ -37,6 +38,8 @@ namespace Fall2020_CSC403_Project {
       npcMike = new NPC(CreatePosition(picNPCMike), CreateCollider(picNPCMike, PADDING));
       npcMerchantSteve = new Merchant(CreatePosition(picNPCMerchantSteve), CreateCollider(picNPCMerchantSteve, PADDING));
 
+      player.Img = picPlayer.BackgroundImage;
+      player.TempImg = picPlayer.BackgroundImage;
       bossKoolaid.Img = picBossKoolAid.BackgroundImage;
       enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
       enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
@@ -89,11 +92,14 @@ namespace Fall2020_CSC403_Project {
       lblInGameTime.Text = "Time: " + time.ToString();
     }
 
+
+    // health bar
     private void tmrPlayerHealth_Tick(object sender, EventArgs e)
     {
       lblHealthBar.Text = "HP: " + player.Health.ToString();
     }
 
+    // exp bar
     private void tmrPlayerExp_Tick(object sender, EventArgs e)
     {
       lblLevelBar.Text = "LEVEL: " + player.Level.ToString();
@@ -140,17 +146,19 @@ namespace Fall2020_CSC403_Project {
                 Close();
       }
 
-      // update player's image if less than 80% health to baby peanut
-      if (player.Health < 0.8 * player.MaxHealth)
+      // update player's image if less than 50% health to baby peanut
+      
+      if (player.Health < 0.5 * player.MaxHealth)
       {
-          player.Img = babyPeanut.BackgroundImage;
-          picPlayer.BackgroundImage = player.Img;
-          picPlayer.Refresh();
-      } else
+        player.Img = babyPeanut.BackgroundImage;
+        picPlayer.BackgroundImage = player.Img;
+        picPlayer.Refresh();
+      }
+      else
       {
-          player.Img = picPlayerTemp.BackgroundImage;
-          picPlayer.BackgroundImage = player.Img;
-          picPlayer.Refresh();
+        player.Img = player.TempImg;
+        picPlayer.BackgroundImage = player.Img;
+        picPlayer.Refresh();
       }
 
         // update player's picture box
@@ -222,6 +230,12 @@ namespace Fall2020_CSC403_Project {
         case Keys.I:
           frmInventory = FrmInventory.GetInstance();
           frmInventory.ShowCommands();
+          break;
+        
+        // open character select screen
+        case Keys.P:
+          frmCharacter = FrmCharacter.GetInstance();
+          frmCharacter.Show();
           break;
 
         default:

@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmCharacter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCharacter.Designer.cs">
+      <DependentUpon>FrmCharacter.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmShop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCharacter.resx">
+      <DependentUpon>FrmCharacter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmShop.resx">
       <DependentUpon>FrmShop.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +249,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\irlpeanut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kingpeanut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ladypeanut.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
