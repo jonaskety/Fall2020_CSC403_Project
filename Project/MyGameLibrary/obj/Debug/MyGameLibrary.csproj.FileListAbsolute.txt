@@ -10,3 +10,9 @@ F:\Education\CSC 403\Fall2020_CSC403_Project\Project\MyGameLibrary\obj\Debug\MyG
 F:\Education\CSC 403\Fall2020_CSC403_Project\Project\MyGameLibrary\obj\Debug\MyGameLibrary.pdb
 F:\Education\CSC 403\Fall2020_CSC403_Project\Project\MyGameLibrary\bin\Debug\MyGameLibrary.dll
 F:\Education\CSC 403\Fall2020_CSC403_Project\Project\MyGameLibrary\bin\Debug\MyGameLibrary.pdb
+C:\Users\Cody\Documents\Programs\Cherry\Fall2020_CSC403_Project\Project\MyGameLibrary\bin\Debug\MyGameLibrary.dll
+C:\Users\Cody\Documents\Programs\Cherry\Fall2020_CSC403_Project\Project\MyGameLibrary\bin\Debug\MyGameLibrary.pdb
+C:\Users\Cody\Documents\Programs\Cherry\Fall2020_CSC403_Project\Project\MyGameLibrary\obj\Debug\MyGameLibrary.csprojAssemblyReference.cache
+C:\Users\Cody\Documents\Programs\Cherry\Fall2020_CSC403_Project\Project\MyGameLibrary\obj\Debug\MyGameLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Cody\Documents\Programs\Cherry\Fall2020_CSC403_Project\Project\MyGameLibrary\obj\Debug\MyGameLibrary.dll
+C:\Users\Cody\Documents\Programs\Cherry\Fall2020_CSC403_Project\Project\MyGameLibrary\obj\Debug\MyGameLibrary.pdb

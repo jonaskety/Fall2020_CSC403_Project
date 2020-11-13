@@ -15,16 +15,18 @@ namespace Fall2020_CSC403_Project.code
             power = pwr;
             cost = cst;
             type = tpe;
+            player = Game.player;
         }
 
         public Image image { get; set; }
         public int power { get; set; }
         public int cost { get; set; }
         public char type { get; set; }
+        public Player player { get; set; }
 
         public void Use()
         {
-
+            player.AlterStrength(power);
         }
     }
 }

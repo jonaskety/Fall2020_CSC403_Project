@@ -70,6 +70,7 @@ namespace Fall2020_CSC403_Project
             this.picPlayer.Location = new System.Drawing.Point(99, 46);
             this.picPlayer.Name = "picPlayer";
             this.picPlayer.Size = new System.Drawing.Size(122, 250);
+            this.picPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPlayer.TabIndex = 0;
             this.picPlayer.TabStop = false;
             // 
@@ -79,7 +80,7 @@ namespace Fall2020_CSC403_Project
             this.picItem1.Location = new System.Drawing.Point(323, 114);
             this.picItem1.Name = "picItem1";
             this.picItem1.Size = new System.Drawing.Size(100, 100);
-            this.picItem1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picItem1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picItem1.TabIndex = 1;
             this.picItem1.TabStop = false;
             this.picItem1.Click += new System.EventHandler(this.picItem1_Click);
@@ -90,7 +91,7 @@ namespace Fall2020_CSC403_Project
             this.picItem2.Location = new System.Drawing.Point(443, 114);
             this.picItem2.Name = "picItem2";
             this.picItem2.Size = new System.Drawing.Size(100, 100);
-            this.picItem2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picItem2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picItem2.TabIndex = 2;
             this.picItem2.TabStop = false;
             this.picItem2.Click += new System.EventHandler(this.picItem2_Click);
@@ -101,7 +102,7 @@ namespace Fall2020_CSC403_Project
             this.picItem3.Location = new System.Drawing.Point(564, 114);
             this.picItem3.Name = "picItem3";
             this.picItem3.Size = new System.Drawing.Size(100, 100);
-            this.picItem3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picItem3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picItem3.TabIndex = 3;
             this.picItem3.TabStop = false;
             this.picItem3.Click += new System.EventHandler(this.picItem3_Click);
@@ -112,7 +113,7 @@ namespace Fall2020_CSC403_Project
             this.picItem4.Location = new System.Drawing.Point(323, 235);
             this.picItem4.Name = "picItem4";
             this.picItem4.Size = new System.Drawing.Size(100, 100);
-            this.picItem4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picItem4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picItem4.TabIndex = 4;
             this.picItem4.TabStop = false;
             this.picItem4.Click += new System.EventHandler(this.picItem4_Click);
@@ -123,7 +124,7 @@ namespace Fall2020_CSC403_Project
             this.picItem5.Location = new System.Drawing.Point(443, 235);
             this.picItem5.Name = "picItem5";
             this.picItem5.Size = new System.Drawing.Size(100, 100);
-            this.picItem5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picItem5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picItem5.TabIndex = 5;
             this.picItem5.TabStop = false;
             this.picItem5.Click += new System.EventHandler(this.picItem5_Click);
@@ -134,7 +135,7 @@ namespace Fall2020_CSC403_Project
             this.picItem6.Location = new System.Drawing.Point(564, 235);
             this.picItem6.Name = "picItem6";
             this.picItem6.Size = new System.Drawing.Size(100, 100);
-            this.picItem6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picItem6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picItem6.TabIndex = 6;
             this.picItem6.TabStop = false;
             this.picItem6.Click += new System.EventHandler(this.picItem6_Click);
@@ -145,7 +146,7 @@ namespace Fall2020_CSC403_Project
             this.picItem7.Location = new System.Drawing.Point(323, 357);
             this.picItem7.Name = "picItem7";
             this.picItem7.Size = new System.Drawing.Size(100, 100);
-            this.picItem7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picItem7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picItem7.TabIndex = 7;
             this.picItem7.TabStop = false;
             this.picItem7.Click += new System.EventHandler(this.picItem7_Click);
@@ -156,7 +157,7 @@ namespace Fall2020_CSC403_Project
             this.picItem8.Location = new System.Drawing.Point(443, 357);
             this.picItem8.Name = "picItem8";
             this.picItem8.Size = new System.Drawing.Size(100, 100);
-            this.picItem8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picItem8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picItem8.TabIndex = 8;
             this.picItem8.TabStop = false;
             this.picItem8.Click += new System.EventHandler(this.picItem8_Click);
@@ -167,7 +168,7 @@ namespace Fall2020_CSC403_Project
             this.picItem9.Location = new System.Drawing.Point(564, 357);
             this.picItem9.Name = "picItem9";
             this.picItem9.Size = new System.Drawing.Size(100, 100);
-            this.picItem9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picItem9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picItem9.TabIndex = 9;
             this.picItem9.TabStop = false;
             this.picItem9.Click += new System.EventHandler(this.picItem9_Click);

@@ -148,7 +148,7 @@
     <value>Stretch</value>
   </data>
   <data name="picNPC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>454, 61</value>
+    <value>491, 61</value>
   </data>
   <data name="picNPC.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 220</value>
@@ -168,20 +168,20 @@
   <data name="&gt;&gt;picNPC.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="labelNPC.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="labelNPC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>500, 302</value>
+    <value>460, 302</value>
   </data>
   <data name="labelNPC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
+    <value>204, 31</value>
   </data>
   <data name="labelNPC.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="labelNPC.Text" xml:space="preserve">
     <value>textNPC</value>
+  </data>
+  <data name="labelNPC.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
   </data>
   <data name="&gt;&gt;labelNPC.Name" xml:space="preserve">
     <value>labelNPC</value>
@@ -196,7 +196,7 @@
     <value>1</value>
   </data>
   <data name="btnContinue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 302</value>
+    <value>206, 302</value>
   </data>
   <data name="btnContinue.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>

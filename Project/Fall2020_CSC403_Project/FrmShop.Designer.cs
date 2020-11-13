@@ -46,12 +46,12 @@
             // 
             // labelMerchant
             // 
-            this.labelMerchant.AutoSize = true;
-            this.labelMerchant.Location = new System.Drawing.Point(366, 210);
+            this.labelMerchant.Location = new System.Drawing.Point(238, 210);
             this.labelMerchant.Name = "labelMerchant";
-            this.labelMerchant.Size = new System.Drawing.Size(35, 13);
+            this.labelMerchant.Size = new System.Drawing.Size(358, 42);
             this.labelMerchant.TabIndex = 2;
             this.labelMerchant.Text = "label1";
+            this.labelMerchant.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnContinue
             // 
@@ -136,6 +136,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.btnLeave);
             this.Controls.Add(this.picMerchantItem3);
             this.Controls.Add(this.picMerchantItem2);
@@ -144,15 +145,17 @@
             this.Controls.Add(this.labelMerchant);
             this.Controls.Add(this.picNPCMerchant);
             this.Controls.Add(this.picPlayer);
+            this.KeyPreview = true;
             this.Name = "FrmShop";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmShop_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmShop_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.picMerchantItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMerchantItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMerchantItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNPCMerchant)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

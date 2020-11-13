@@ -52,7 +52,7 @@ namespace Fall2020_CSC403_Project {
       // declare messages for the NPCs
       npcMike.Message = "Good luck finishing the Kool-aid!";
       npcMerchantSteve.Message = "Hello, how are you?";
-      npcMerchantSteve.shopMessage = "Check out my stuff.";
+      npcMerchantSteve.shopMessage = "Check out my stuff.\nYou know, you can press I to access your inventory.\nBut don't tell anyone I told you that.";
       
       // add food to the merchant's inventory
       mango.Img = picFoodMango.BackgroundImage;
@@ -110,14 +110,20 @@ namespace Fall2020_CSC403_Project {
       }
 
       // check collision with enemies
-      if (HitAChar(player, enemyPoisonPacket)) {
+      if (enemyPoisonPacket != null && HitAChar(player, enemyPoisonPacket)) {
         Fight(enemyPoisonPacket);
+                picEnemyPoisonPacket.Visible = false;
+                enemyPoisonPacket = null;
       }
-      else if (HitAChar(player, enemyCheeto)) {
+      else if (enemyCheeto != null && HitAChar(player, enemyCheeto)) {
         Fight(enemyCheeto);
+                picEnemyCheeto.Visible = false;
+                enemyCheeto = null;
       }
-      if (HitAChar(player, bossKoolaid)) {
+      if (bossKoolaid != null && HitAChar(player, bossKoolaid)) {
         Fight(bossKoolaid);
+                picBossKoolAid.Visible = false;
+                bossKoolaid = null;
       }
 
       // check collision with npc
@@ -223,5 +229,10 @@ namespace Fall2020_CSC403_Project {
           break;
       }
     }
-  }
+
+        private void picEnemyCheeto_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

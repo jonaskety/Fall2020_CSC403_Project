@@ -15,6 +15,7 @@ namespace Fall2020_CSC403_Project
         public static FrmTalk instance = null;
         private NPC npc;
         private Player player;
+        private FrmInventory frmInventory;
 
         public FrmTalk()
         {
@@ -32,6 +33,8 @@ namespace Fall2020_CSC403_Project
 
             // load the npc message
             labelNPC.Text = npc.Message;
+
+            picPlayer.BackgroundImage = player.Img;
         }
 
         public static FrmTalk GetInstance(NPC npc)
@@ -57,6 +60,17 @@ namespace Fall2020_CSC403_Project
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmTalk_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.I:
+                    frmInventory = FrmInventory.GetInstance();
+                    frmInventory.ShowCommands();
+                    break;
+            }
         }
     }
 }

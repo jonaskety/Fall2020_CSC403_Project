@@ -14,7 +14,6 @@ namespace Fall2020_CSC403_Project {
     private FrmInventory frmInventory;
     private List<Item> lootTable = new List<Item>();
     private bool Boss;
-    private bool ready = false;
 
     private FrmBattle() {
       InitializeComponent();
@@ -59,7 +58,6 @@ namespace Fall2020_CSC403_Project {
       // Observer pattern
       enemy.AttackEvent += PlayerDamage;
       player.AttackEvent += EnemyDamage;
-      player.HealEvent += PlayerHeal;
 
       // show health
       UpdateHealthBars();
@@ -75,7 +73,6 @@ namespace Fall2020_CSC403_Project {
       simpleSound.Play();
 
       tmrFinalBattle.Enabled = true;
-      btnHeal.Visible = true;
       enemy.ChallengeMode();
       UpdateHealthBars();
     }
@@ -113,18 +110,23 @@ namespace Fall2020_CSC403_Project {
       player.OnAttack(-4);
       if (enemy.Health > 0) {
                 if (Boss) {
-                    enemy.OnAttack(-3);
+                    enemy.OnAttack((int)(-4 + player.armorDef * 0.2));
                 } else {
-                    enemy.OnAttack(-2);
+                    enemy.OnAttack((int)(-3 + player.armorDef * 0.2));
                 }
       }
 
       UpdateHealthBars();
       if (player.Health <= 0 || enemy.Health <= 0) {
                 if (enemy.Health <= 0) {
+                    if (Boss)
+                    {
+                        MessageBox.Show("Congratulations, you won!");
+                        Application.Exit();
+                    }
                     UpdateExp();
                     GivePlayerLoot();
-                    MessageBox.Show("You got loot! Access your inventory with I.");
+                    MessageBox.Show("You got loot! Access your inventory with I to see it.");
                     instance = null;
                     Close();
                 }
@@ -151,25 +153,10 @@ namespace Fall2020_CSC403_Project {
       player.AlterHealth(amount);
     }
 
-    private void PlayerHeal(int amount) {
-            player.AlterHealth(amount);
-    }
-
     private void tmrFinalBattle_Tick(object sender, EventArgs e) {
       picBossBattle.Visible = false;
       tmrFinalBattle.Enabled = false;
     }
-
-        private void btnHeal_Click(object sender, EventArgs e) {
-            player.OnHeal(4);
-            if (Boss) {
-                enemy.OnAttack(-3);
-            } else {
-                enemy.OnAttack(-2);
-            }
-
-            UpdateHealthBars();
-        }
 
     private void FrmBattle_KeyDown(object sender, KeyEventArgs e)
         {
@@ -180,6 +167,16 @@ namespace Fall2020_CSC403_Project {
                     frmInventory.ShowCommands();
                     break;
             }
+        }
+
+        private void FrmBattle_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tmrUpdateHealth_Tick(object sender, EventArgs e)
+        {
+            UpdateHealthBars();
         }
     }
 }
