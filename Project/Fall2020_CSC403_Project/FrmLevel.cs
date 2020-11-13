@@ -50,7 +50,7 @@ namespace Fall2020_CSC403_Project {
       npcMerchantSteve.Color = Color.FromArgb(255, 255, 153);
 
       // declare messages for the NPCs
-      npcMike.Message = "Good luck finishing the Kool-aid!";
+      npcMike.Message = "Good luck finishing the Kool-aid!\nI'll teach you everything I know!";
       npcMerchantSteve.Message = "Hello, how are you?";
       npcMerchantSteve.shopMessage = "Check out my stuff.\nYou know, you can press I to access your inventory.\nBut don't tell anyone I told you that.";
       
@@ -229,10 +229,5 @@ namespace Fall2020_CSC403_Project {
           break;
       }
     }
-
-        private void picEnemyCheeto_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -54,6 +54,12 @@ namespace Fall2020_CSC403_Project
         private void btnContinue_Click(object sender, EventArgs e)
         {
             instance = null;
+            player.Exp += 500;
+            while (player.Exp >= player.ExpNeeded)
+            {
+                player.UpdateLevel();
+                player.UpdateStats();
+            }
             Close();
         }
 

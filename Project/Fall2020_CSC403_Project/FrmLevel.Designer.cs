@@ -302,7 +302,6 @@
             this.picEnemyCheeto.Size = new System.Drawing.Size(64, 107);
             this.picEnemyCheeto.TabIndex = 5;
             this.picEnemyCheeto.TabStop = false;
-            this.picEnemyCheeto.Click += new System.EventHandler(this.picEnemyCheeto_Click);
             // 
             // picEnemyPoisonPacket
             // 
