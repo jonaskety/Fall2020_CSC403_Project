@@ -12,7 +12,7 @@ namespace Fall2020_CSC403_Project.code
         public Color Color { get; set; }
 
         // maximum of 3 inventory slots for merchants
-        public Food[] inventory = new Food[3];
+        public ShopFood[] inventory = new ShopFood[3];
 
         public Merchant(Vector2 initPos, Collider collider) : base(initPos, collider)
         {
@@ -21,7 +21,7 @@ namespace Fall2020_CSC403_Project.code
         /// <summary>
         /// Add a food item to the merchant's inventory
         /// </summary>
-        public void AddFood(Food item)
+        public void AddFood(ShopFood item)
         {
             for (int i=0; i<inventory.Length; i++)
             {

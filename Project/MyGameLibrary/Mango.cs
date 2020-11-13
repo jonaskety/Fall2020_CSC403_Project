@@ -8,7 +8,7 @@ namespace Fall2020_CSC403_Project.code
     /// <summary>
     /// Mango has health regeneration of 10
     /// </summary>
-    public class Mango : Food
+    public class Mango : ShopFood
     {
         public Mango()
         {

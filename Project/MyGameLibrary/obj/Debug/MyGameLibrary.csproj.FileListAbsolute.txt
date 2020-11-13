@@ -4,3 +4,9 @@ C:\Users\Cody\Documents\Programs\Cherry\Project\MyGameLibrary\obj\Debug\MyGameLi
 C:\Users\Cody\Documents\Programs\Cherry\Project\MyGameLibrary\obj\Debug\MyGameLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Cody\Documents\Programs\Cherry\Project\MyGameLibrary\obj\Debug\MyGameLibrary.dll
 C:\Users\Cody\Documents\Programs\Cherry\Project\MyGameLibrary\obj\Debug\MyGameLibrary.pdb
+F:\Education\CSC 403\Fall2020_CSC403_Project\Project\MyGameLibrary\obj\Debug\MyGameLibrary.csprojAssemblyReference.cache
+F:\Education\CSC 403\Fall2020_CSC403_Project\Project\MyGameLibrary\obj\Debug\MyGameLibrary.csproj.CoreCompileInputs.cache
+F:\Education\CSC 403\Fall2020_CSC403_Project\Project\MyGameLibrary\obj\Debug\MyGameLibrary.dll
+F:\Education\CSC 403\Fall2020_CSC403_Project\Project\MyGameLibrary\obj\Debug\MyGameLibrary.pdb
+F:\Education\CSC 403\Fall2020_CSC403_Project\Project\MyGameLibrary\bin\Debug\MyGameLibrary.dll
+F:\Education\CSC 403\Fall2020_CSC403_Project\Project\MyGameLibrary\bin\Debug\MyGameLibrary.pdb

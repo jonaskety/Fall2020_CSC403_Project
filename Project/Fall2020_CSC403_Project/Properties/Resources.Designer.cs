@@ -182,26 +182,6 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap npc_herobrine {
-            get {
-                object obj = ResourceManager.GetObject("npc_herobrine", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap npc_mike {
-            get {
-                object obj = ResourceManager.GetObject("npc_mike", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap gun {
             get {
                 object obj = ResourceManager.GetObject("gun", resourceCulture);
@@ -252,6 +232,26 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap npc_herobrine {
+            get {
+                object obj = ResourceManager.GetObject("npc_herobrine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap npc_mike {
+            get {
+                object obj = ResourceManager.GetObject("npc_mike", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Onesie {
             get {
                 object obj = ResourceManager.GetObject("Onesie", resourceCulture);
@@ -265,6 +265,16 @@ namespace Fall2020_CSC403_Project.Properties {
         internal static System.Drawing.Bitmap player {
             get {
                 object obj = ResourceManager.GetObject("player", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap player_babypeanut {
+            get {
+                object obj = ResourceManager.GetObject("player_babypeanut", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
