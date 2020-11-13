@@ -1,0 +1,6 @@
+C:\Users\Cody\Documents\Programs\Cherry\Project\MyGameLibrary\bin\Debug\MyGameLibrary.dll
+C:\Users\Cody\Documents\Programs\Cherry\Project\MyGameLibrary\bin\Debug\MyGameLibrary.pdb
+C:\Users\Cody\Documents\Programs\Cherry\Project\MyGameLibrary\obj\Debug\MyGameLibrary.csprojAssemblyReference.cache
+C:\Users\Cody\Documents\Programs\Cherry\Project\MyGameLibrary\obj\Debug\MyGameLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Cody\Documents\Programs\Cherry\Project\MyGameLibrary\obj\Debug\MyGameLibrary.dll
+C:\Users\Cody\Documents\Programs\Cherry\Project\MyGameLibrary\obj\Debug\MyGameLibrary.pdb
