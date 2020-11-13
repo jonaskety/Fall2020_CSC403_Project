@@ -52,6 +52,9 @@
             this.picBossKoolAid = new System.Windows.Forms.PictureBox();
             this.picPlayer = new System.Windows.Forms.PictureBox();
             this.picPlayerTemp = new System.Windows.Forms.PictureBox();
+            this.picNPCMerchantSteve = new System.Windows.Forms.PictureBox();
+            this.picFoodMango = new System.Windows.Forms.PictureBox();
+            this.picNPCMike = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.babyPeanut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picWall2)).BeginInit();
@@ -71,6 +74,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerTemp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picNPCMerchantSteve)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoodMango)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picNPCMike)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInGameTime
@@ -146,7 +152,7 @@
             // 
             this.babyPeanut.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.player_babypeanut;
             this.babyPeanut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.babyPeanut.Location = new System.Drawing.Point(439, 551);
+            this.babyPeanut.Location = new System.Drawing.Point(569, 507);
             this.babyPeanut.Name = "babyPeanut";
             this.babyPeanut.Size = new System.Drawing.Size(53, 109);
             this.babyPeanut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -346,12 +352,43 @@
             this.picPlayerTemp.BackColor = System.Drawing.Color.Transparent;
             this.picPlayerTemp.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.player;
             this.picPlayerTemp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picPlayerTemp.Location = new System.Drawing.Point(498, 551);
+            this.picPlayerTemp.Location = new System.Drawing.Point(628, 510);
             this.picPlayerTemp.Name = "picPlayerTemp";
             this.picPlayerTemp.Size = new System.Drawing.Size(54, 106);
             this.picPlayerTemp.TabIndex = 22;
             this.picPlayerTemp.TabStop = false;
             this.picPlayerTemp.Visible = false;
+            // 
+            // picNPCMerchantSteve
+            // 
+            this.picNPCMerchantSteve.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.npc_herobrine;
+            this.picNPCMerchantSteve.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picNPCMerchantSteve.Location = new System.Drawing.Point(441, 521);
+            this.picNPCMerchantSteve.Name = "picNPCMerchantSteve";
+            this.picNPCMerchantSteve.Size = new System.Drawing.Size(111, 136);
+            this.picNPCMerchantSteve.TabIndex = 23;
+            this.picNPCMerchantSteve.TabStop = false;
+            // 
+            // picFoodMango
+            // 
+            this.picFoodMango.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.picFoodMango.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.food_mango;
+            this.picFoodMango.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picFoodMango.Location = new System.Drawing.Point(518, 598);
+            this.picFoodMango.Name = "picFoodMango";
+            this.picFoodMango.Size = new System.Drawing.Size(33, 27);
+            this.picFoodMango.TabIndex = 24;
+            this.picFoodMango.TabStop = false;
+            // 
+            // picNPCMike
+            // 
+            this.picNPCMike.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.npc_mike;
+            this.picNPCMike.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picNPCMike.Location = new System.Drawing.Point(555, 70);
+            this.picNPCMike.Name = "picNPCMike";
+            this.picNPCMike.Size = new System.Drawing.Size(98, 84);
+            this.picNPCMike.TabIndex = 25;
+            this.picNPCMike.TabStop = false;
             // 
             // FrmLevel
             // 
@@ -360,6 +397,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1176, 726);
+            this.Controls.Add(this.picNPCMike);
+            this.Controls.Add(this.picFoodMango);
+            this.Controls.Add(this.picNPCMerchantSteve);
             this.Controls.Add(this.picPlayerTemp);
             this.Controls.Add(this.babyPeanut);
             this.Controls.Add(this.lblExpBar);
@@ -409,6 +449,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerTemp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picNPCMerchantSteve)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoodMango)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picNPCMike)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -443,6 +486,9 @@
     private System.Windows.Forms.Label lblExpBar;
     private System.Windows.Forms.PictureBox babyPeanut;
     private System.Windows.Forms.PictureBox picPlayerTemp;
+        private System.Windows.Forms.PictureBox picNPCMerchantSteve;
+        private System.Windows.Forms.PictureBox picFoodMango;
+        private System.Windows.Forms.PictureBox picNPCMike;
     }
 }
 
