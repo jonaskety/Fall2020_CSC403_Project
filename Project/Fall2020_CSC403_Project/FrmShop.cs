@@ -16,6 +16,8 @@ namespace Fall2020_CSC403_Project
         public static FrmShop instance = null;
         private Merchant merchant;
         private Player player;
+        private FrmInventory frmInventory = FrmInventory.GetInstance();
+        private Item mango = new Food(Resources.food_mango, 10, 5, 'F');
 
         public FrmShop()
         {
@@ -33,6 +35,8 @@ namespace Fall2020_CSC403_Project
 
             // load the npc message
             labelMerchant.Text = merchant.Message;
+
+            picPlayer.BackgroundImage = player.Img;
         }
 
         public static FrmShop GetInstance(Merchant merchant)
@@ -86,8 +90,13 @@ namespace Fall2020_CSC403_Project
         {
             if (picMerchantItem1.Visible)
             {
-                player.AlterHealth(merchant.inventory[0].healthRegen);
-                merchant.RemoveFood(0);
+                if (frmInventory.inventory.Count < 9)
+                {
+                    merchant.RemoveFood(0);
+                    frmInventory.inventory.Add(mango);
+                }
+                else
+                    MessageBox.Show("Your inventory is full. Remove some items to pick up the mango.");
             }
             UpdateInventory();
         }
@@ -99,8 +108,13 @@ namespace Fall2020_CSC403_Project
         {
             if (picMerchantItem2.Visible)
             {
-                player.AlterHealth(merchant.inventory[1].healthRegen);
-                merchant.RemoveFood(1);
+                if (frmInventory.inventory.Count < 9)
+                {
+                    merchant.RemoveFood(1);
+                    frmInventory.inventory.Add(mango);
+                }
+                else
+                    MessageBox.Show("Your inventory is full. Remove some items to pick up the mango.");
             }
             UpdateInventory();
         }
@@ -112,8 +126,13 @@ namespace Fall2020_CSC403_Project
         {
             if (picMerchantItem3.Visible)
             {
-                player.AlterHealth(merchant.inventory[2].healthRegen);
-                merchant.RemoveFood(2);
+                if (frmInventory.inventory.Count < 9)
+                {
+                    merchant.RemoveFood(2);
+                    frmInventory.inventory.Add(mango);
+                }
+                else
+                    MessageBox.Show("Your inventory is full. Remove some items to pick up the mango.");
             }
             UpdateInventory();
         }
@@ -130,6 +149,22 @@ namespace Fall2020_CSC403_Project
         {
             instance = null;
             Close();
+        }
+
+        private void FrmShop_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.I:
+                    frmInventory = FrmInventory.GetInstance();
+                    frmInventory.ShowCommands();
+                    break;
+            }
+        }
+
+        private void FrmShop_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

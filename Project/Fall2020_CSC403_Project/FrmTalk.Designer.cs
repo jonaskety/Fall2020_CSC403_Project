@@ -71,15 +71,17 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ControlBox = false;
             this.Controls.Add(this.btnContinue);
             this.Controls.Add(this.labelNPC);
             this.Controls.Add(this.picPlayer);
             this.Controls.Add(this.picNPC);
+            this.KeyPreview = true;
             this.Name = "FrmTalk";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmTalk_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNPC)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
