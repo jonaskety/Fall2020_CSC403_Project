@@ -11,23 +11,22 @@ namespace Fall2020_CSC403_Project.code {
     public int Health { get; private set; }
     public int MaxHealth { get; private set; }
     private float strength;
+    private float weaponStr;
+    public float armorDef;
 
     public event Action<int> AttackEvent;
-    public event Action<int> HealEvent;
 
     public BattleCharacter(Vector2 initPos, Collider collider) : base(initPos, collider) {
       MaxHealth = 20;
-      strength = 2;
+      strength = 1.5f;
+      weaponStr = 0;
+      armorDef = 0;
       Health = MaxHealth;
     }
 
     public void OnAttack(int amount) {
-      AttackEvent((int)(amount * strength));
+      AttackEvent((int)(amount * (strength + weaponStr * 0.2)));
     }
-
-    public void OnHeal(int amount) {
-            HealEvent((int)(amount * strength));
-        }
 
     public void AlterHealth(int amount) {
       Health += amount;
@@ -37,7 +36,7 @@ namespace Fall2020_CSC403_Project.code {
     }
 
     public void ChallengeMode() {
-            MaxHealth = 40;
+            MaxHealth = 60;
             strength = 3;
             Health = MaxHealth;
     }
@@ -46,6 +45,16 @@ namespace Fall2020_CSC403_Project.code {
             MaxHealth += 5;
             Health = MaxHealth;
             strength += 1;
+        }
+
+        public void AlterStrength(int amount)
+        {
+            weaponStr = amount;
+        }
+
+        public void AlterDefense(int amount)
+        {
+            armorDef = amount;
         }
     }
 }

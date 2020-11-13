@@ -13,6 +13,7 @@ namespace Fall2020_CSC403_Project.code
         int power { get; set; }
         int cost { get; set; }
         char type { get; set; }
+        Player player { get; set; }
 
         void Use();
     }
