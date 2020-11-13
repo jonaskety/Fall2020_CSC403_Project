@@ -20,6 +20,7 @@ namespace Fall2020_CSC403_Project {
     private FrmBattle frmBattle;
     private FrmTalk frmTalk;
     private FrmShop frmShop;
+    private FrmInventory frmInventory;
 
     public FrmLevel() {
       InitializeComponent();
@@ -212,10 +213,15 @@ namespace Fall2020_CSC403_Project {
           player.GoDown();
           break;
 
+        case Keys.I:
+          frmInventory = FrmInventory.GetInstance();
+          frmInventory.ShowCommands();
+          break;
+
         default:
           player.ResetMoveSpeed();
           break;
       }
     }
-    }
+  }
 }
