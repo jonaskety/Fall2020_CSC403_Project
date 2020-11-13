@@ -15,16 +15,13 @@ namespace Fall2020_CSC403_Project
     {
         public static FrmInventory instance = null;
         private Player player;
-        private List<Item> inventory = new List<Item>();
+        public List<Item> inventory = new List<Item>();
         private Item selected;
 
         public FrmInventory()
         {
             InitializeComponent();
             player = Game.player;
-
-            for (int i = 0; i < 9; i++)
-                inventory.Add(null);
         }
 
         private void FrmInventory_Deactivate(object sender, EventArgs e)
@@ -51,24 +48,50 @@ namespace Fall2020_CSC403_Project
 
         private void UpdateItemPictures()
         {
-            if (inventory[0] != null)
+            if (inventory.Count > 0)
                 picItem1.Image = inventory[0].image;
-            if (inventory[1] != null)
+            else
+                picItem1.Image = null;
+
+            if (inventory.Count > 1)
                 picItem2.Image = inventory[1].image;
-            if (inventory[2] != null)
+            else
+                picItem2.Image = null;
+
+            if (inventory.Count > 2)
                 picItem3.Image = inventory[2].image;
-            if (inventory[3] != null)
+            else
+                picItem3.Image = null;
+
+            if (inventory.Count > 3)
                 picItem4.Image = inventory[3].image;
-            if (inventory[4] != null)
+            else
+                picItem4.Image = null;
+
+            if (inventory.Count > 4)
                 picItem5.Image = inventory[4].image;
-            if (inventory[5] != null)
+            else
+                picItem5.Image = null;
+
+            if (inventory.Count > 5)
                 picItem6.Image = inventory[5].image;
-            if (inventory[6] != null)
+            else
+                picItem6.Image = null;
+
+            if (inventory.Count > 6)
                 picItem7.Image = inventory[6].image;
-            if (inventory[7] != null)
+            else
+                picItem7.Image = null;
+
+            if (inventory.Count > 7)
                 picItem8.Image = inventory[7].image;
-            if (inventory[8] != null)
+            else
+                picItem8.Image = null;
+
+            if (inventory.Count > 8)
                 picItem9.Image = inventory[8].image;
+            else
+                picItem9.Image = null;
         }
 
         public static FrmInventory GetInstance()
@@ -132,10 +155,24 @@ namespace Fall2020_CSC403_Project
 
         private void EnableCommands(int index)
         {
-            if (inventory[index] != null)
+            if (inventory.Count > index)
             {
                 selected = inventory[index];
                 lblPower.Text = selected.power.ToString();
+
+                switch (selected.type)
+                {
+                    case 'F':
+                        lblType.Text = "Health restored:";
+                        break;
+                    case 'W':
+                        lblType.Text = "Weapon strength:";
+                        break;
+                    case 'A':
+                        lblType.Text = "Armor defense:";
+                        break;
+                }
+
                 SetButtonState(true);
             }
         }
@@ -149,19 +186,29 @@ namespace Fall2020_CSC403_Project
         private void DisableCommands()
         {
             selected = null;
-            lblPower.Text = "0";
+            lblPower.Text = "";
+            lblType.Text = "";
             SetButtonState(false);
         }
 
         private void btnUse_Click(object sender, EventArgs e)
         {
             selected.Use();
+            if (selected.type == 'A')
+                lblDefense.Text = selected.power.ToString();
+            else if (selected.type == 'W')
+                lblStrength.Text = selected.power.ToString();
+            inventory.Remove(selected);
+            UpdateHealthBar();
+            UpdateItemPictures();
             DisableCommands();
         }
 
         private void btnDestroy_Click(object sender, EventArgs e)
         {
-            selected.Use();
+            inventory.Remove(selected);
+            UpdateHealthBar();
+            UpdateItemPictures();
             DisableCommands();
         }
     }

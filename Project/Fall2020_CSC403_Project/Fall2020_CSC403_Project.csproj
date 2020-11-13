@@ -81,6 +81,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="data\sword.png" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -129,6 +130,57 @@
       <Project>{F1E60F80-1868-4FE5-991B-FDDCFAF9B16B}</Project>
       <Name>MyGameLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\mikeslemonade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\egg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\jorts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\yeezys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\energysword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\plunger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\BFG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\stick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\gun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\socks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\Mask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\Onesie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\Burg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\Apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\RawPorkchopNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\monster.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

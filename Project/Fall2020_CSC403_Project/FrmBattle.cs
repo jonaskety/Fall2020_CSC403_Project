@@ -1,21 +1,46 @@
 ﻿using Fall2020_CSC403_Project.code;
 using Fall2020_CSC403_Project.Properties;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Media;
 using System.Windows.Forms;
 
 namespace Fall2020_CSC403_Project {
-  public partial class FrmBattle : Form {
-    public static FrmBattle instance = null;
-    private Enemy enemy;
-    private Player player;
-    private FrmInventory frmInventory;
+    public partial class FrmBattle : Form {
+        public static FrmBattle instance = null;
+        private Enemy enemy;
+        private Player player;
+        private FrmInventory frmInventory;
+        private List<Item> lootTable = new List<Item>();
 
-    private FrmBattle() {
-      InitializeComponent();
-      player = Game.player;
-    }
+        private FrmBattle() {
+            InitializeComponent();
+            player = Game.player;
+            AddLootToTables();
+        }
+
+        private void AddLootToTables()
+        {
+            lootTable.Add(new Food(Resources.Apple, 6, 4, 'F'));
+            lootTable.Add(new Food(Resources.monster, 10, 8, 'F'));
+            lootTable.Add(new Food(Resources.mikeslemonade, 12, 10, 'F'));
+            lootTable.Add(new Food(Resources.RawPorkchopNew, 4, 3, 'F'));
+            lootTable.Add(new Food(Resources.egg, 2, 1, 'F'));
+            lootTable.Add(new Food(Resources.Burg, 8, 6, 'F'));
+            lootTable.Add(new Armor(Resources.armor, 3, 12, 'A'));
+            lootTable.Add(new Armor(Resources.Onesie, 1, 1, 'A'));
+            lootTable.Add(new Armor(Resources.Mask, 2, 5, 'A'));
+            lootTable.Add(new Armor(Resources.socks, 1, 2, 'A'));
+            lootTable.Add(new Armor(Resources.jorts, 3, 9, 'A'));
+            lootTable.Add(new Armor(Resources.yeezys, 2, 4, 'A'));
+            lootTable.Add(new Weapon(Resources.sword, 2, 5, 'W'));
+            lootTable.Add(new Weapon(Resources.stick, 1, 1, 'W'));
+            lootTable.Add(new Weapon(Resources.gun, 2, 6, 'W'));
+            lootTable.Add(new Weapon(Resources.BFG, 3, 9, 'W'));
+            lootTable.Add(new Weapon(Resources.energysword, 3, 11, 'W'));
+            lootTable.Add(new Weapon(Resources.plunger, 1, 3, 'W'));
+        }
 
     public void Setup() {
       // update for this enemy
@@ -71,11 +96,28 @@ namespace Fall2020_CSC403_Project {
       }
 
       UpdateHealthBars();
-      if (player.Health <= 0 || enemy.Health <= 0) {
+      if (player.Health <= 0) {
         instance = null;
         Close();
       }
+      else if (enemy.Health <= 0)
+            {
+                GivePlayerLoot();
+                MessageBox.Show("You got loot! Access your inventory with I.");
+                instance = null;
+                Close();
+            }
     }
+
+        private void GivePlayerLoot()
+        {
+            frmInventory = FrmInventory.GetInstance();
+            Random rnd = new Random();
+            if (frmInventory.inventory.Count < 9)
+                frmInventory.inventory.Add(lootTable[rnd.Next(18)]);
+            if (frmInventory.inventory.Count < 9)
+                frmInventory.inventory.Add(lootTable[rnd.Next(18)]);
+        }
 
     private void EnemyDamage(int amount) {
       enemy.AlterHealth(amount);
